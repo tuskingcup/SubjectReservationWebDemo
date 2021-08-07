@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+
     <br />
     <p style="font-family: Roboto; font-size: 18pt">
       SIT Subject Reservation Web by tus
@@ -8,6 +9,7 @@
     <v-row justify="center" align="top" no-gutters style="height: 150px">
       <v-col v-for="subject in subjectList" :key="subject.subjectId" cols="3" class="pa-2">
         <subject :subject="subject" @fetchSubjects="getSubjectList()" @subjectIsMax="errorSubjectIsMax()" />
+
       </v-col>
     </v-row>
     <v-dialog v-model="isError" width="500">
